@@ -1,0 +1,52 @@
+context("check that data set is loaded/available")
+test_that("check correct dimensions",
+          expect_equal(nrow(wordlist_en), 7776))
+
+context("test token")
+test_that("check length", {
+          expect_false(check_token(character(0)))
+          expect_false(check_token(c("11111", "22222")))
+          expect_false(check_token("111"))
+          expect_false(check_token("111111"))
+          expect_true(check_token("11111"))
+      })
+
+test_that("check digits", {
+          expect_false(check_token("A1111"))
+          expect_false(check_token(NA))
+          expect_false(check_token(NULL))
+          expect_false(check_token("01234"))
+          expect_true(check_token("12345"))
+          expect_true(check_token("23456"))
+      })
+
+context("generate token")
+test_that("correct length", {
+          test_len <- lapply(1:10, generate_token)
+          expect_equal(1:10, sapply(test_len, length))
+      })
+
+context("match token")
+test_that("correct matching", {
+              expect_equal(match_token("11111", wordlist = wordlist_en, title_case = TRUE), "A")
+              expect_equal(match_token("11111", wordlist = wordlist_en, title_case = FALSE), "a")
+              expect_equal(match_token("16234", wordlist = wordlist_en, title_case = TRUE), "Cat")
+              expect_equal(match_token("16234", wordlist = wordlist_en, title_case = FALSE), "cat")
+          })
+
+test_that("fails if incorrect token", {
+              expect_error(match_token("cat"), "invalid token")
+          })
+
+context("generate passphrase")
+test_that("test passphrase", {
+            expect_message(generate_passphrase(tokens = c("36156", "35646"), wordlist = wordlist_en,
+                                               title_case = FALSE, verbose = TRUE),
+                           "lava lamp")
+            expect_equal(generate_passphrase(tokens = c("36156", "35646"), wordlist = wordlist_en,
+                                             title_case = FALSE, verbose = FALSE),
+                         "lavalamp")
+            expect_equal(generate_passphrase(tokens = c("36156", "35646"), wordlist = wordlist_en,
+                                             title_case = TRUE, verbose = FALSE),
+                         "LavaLamp")
+        })
