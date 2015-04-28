@@ -42,3 +42,13 @@
 ##' number representing the results of 5 rolls of a dice, \code{word}
 ##' the Diceware word corresponding to the dice rolls.
 "wordlist_fr"
+
+##' Diceware word list (Italian)
+##'
+##' The Italian Diceware list as provided at
+##' \url{http://www.taringamberini.com/download/diceware_it_IT/word_list_diceware_in_italiano.txt}.
+##' This list is provided by Tarin Gamberini under a GNU General Public License.
+##' @format A \code{data.frame} with 2 columns: \code{token} a 5-digit
+##' number representing the results of 5 rolls of a dice, \code{word}
+##' the Diceware word corresponding to the dice rolls.
+"wordlist_it"

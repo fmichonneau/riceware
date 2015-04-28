@@ -4,6 +4,7 @@ test_that("check correct dimensions", {
           expect_equal(nrow(wordlist_de), 7776)
           expect_equal(nrow(wordlist_es), 7776)
           expect_equal(nrow(wordlist_fr), 7776)
+          expect_equal(nrow(wordlist_it), 7776)
       })
 
 context("test token")
@@ -56,16 +57,25 @@ test_that("test passphrase", {
                                              wordlist = wordlist_en,
                                              title_case = TRUE,
                                              verbose = FALSE), "LavaLamp")
+           ## German
             expect_equal(generate_passphrase(tokens = c("34454"), wordlist = wordlist_de,
                                              title_case = TRUE, verbose = FALSE), "Katze")
             expect_equal(generate_passphrase(tokens = c("34454"), wordlist = wordlist_de,
                                              title_case = FALSE, verbose = FALSE), "katze")
+           ## Spanish
             expect_equal(generate_passphrase(tokens = c("35622"), wordlist = wordlist_es,
                                              title_case = TRUE, verbose = FALSE), "Gato")
             expect_equal(generate_passphrase(tokens = c("35622"), wordlist = wordlist_es,
                                              title_case = FALSE, verbose = FALSE), "gato")
+           ## French
             expect_equal(generate_passphrase(tokens = c("21631"), wordlist = wordlist_fr,
                                              title_case = TRUE, verbose = FALSE), "Chaton")
             expect_equal(generate_passphrase(tokens = c("21631"), wordlist = wordlist_fr,
                                              title_case = FALSE, verbose = FALSE), "chaton")
+           ## Italian (no cat :( ))
+           expect_equal(generate_passphrase(tokens = c("32141"), wordlist = wordlist_it,
+                                             title_case = TRUE, verbose = FALSE), "Gelato")
+            expect_equal(generate_passphrase(tokens = c("32141"), wordlist = wordlist_it,
+                                             title_case = FALSE, verbose = FALSE), "gelato")
+
         })

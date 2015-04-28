@@ -30,3 +30,12 @@ wordlist_fr <- scan(file = "inst/extdata/wordlist_fr.txt", what = "character", q
                     as.data.frame(., stringsAsFactors = FALSE)
 names(wordlist_fr) <- c("token", "word")
 devtools::use_data(wordlist_fr, overwrite = TRUE)
+
+## create the wordlist (Italian)
+library(magrittr)
+wordlist_it <- scan(file = "inst/extdata/wordlist_it.txt", what = "character", quote = "",
+                    sep = " ") %>% .[nzchar(.)]
+wordlist_it <- data.frame(token = wordlist_it[seq(1, length(wordlist_it), by = 2)],
+                          word  = wordlist_it[seq(2, length(wordlist_it), by = 2)],
+                          row.names = NULL)
+devtools::use_data(wordlist_it, overwrite = TRUE)
