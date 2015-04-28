@@ -19,6 +19,39 @@ generate_passphrase(tokens = c("52126", "52215", "52222"))
 #> [1] "RipleyRockyRodeo"
 ```
 
+Other languages
+---------------
+
+In addition of English, riceware provides wordlists in:
+
+-   :fr: French
+-   :jp: Japanese
+-   :es: Spanish
+-   :it: Italian
+-   :de: German
+-   Swedish
+
+``` {.r}
+generate_passphrase(tokens = c("34454"), wordlist = wordlist_de,
+                    title_case = TRUE, verbose = FALSE)
+#> [1] "Katze"
+generate_passphrase(tokens = c("35622"), wordlist = wordlist_es,
+                    title_case = TRUE, verbose = FALSE)
+#> [1] "Gato"
+generate_passphrase(tokens = c("21631"), wordlist = wordlist_fr,
+                    title_case = TRUE, verbose = FALSE)
+#> [1] "Chaton"
+generate_passphrase(tokens = c("32141"), wordlist = wordlist_it,
+                    title_case = TRUE, verbose = FALSE)
+#> [1] "Gelato"
+generate_passphrase(tokens = c("44565"), wordlist = wordlist_jp,
+                    title_case = TRUE, verbose = FALSE)
+#> [1] "Neko"
+generate_passphrase(tokens = c("33343"), wordlist = wordlist_sv,
+                    title_case = TRUE, verbose = FALSE)
+#> [1] "Katt"
+```
+
 installation
 ------------
 
