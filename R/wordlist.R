@@ -57,7 +57,8 @@
 ##'
 ##' The Japanese Diceware list as provided at
 ##' \url{http://s3.amazonaws.com/dotclue.org/diceware_jp.txt}
-##' translated by Hiroshi Yuki, and provided in Romaji by J Greely
+##' translated by Hiroshi Yuki, and provided in Romaji by J Greely. No
+##' license information provided.
 ##' @format A \code{data.frame} with 2 columns: \code{token} a 5-digit
 ##' number representing the results of 5 rolls of a dice, \code{word}
 ##' the Diceware word corresponding to the dice rolls.
@@ -73,3 +74,13 @@
 ## number representing the results of 5 rolls of a dice, \code{word}
 ## the Diceware word corresponding to the dice rolls.
 ## "wordlist_nl"
+
+##' Diceware word list (Swedish)
+##'
+##' The Swedish Diceware list as provided at
+##' \url{http://x42.com/diceware/diceware-sv.txt} provided by by
+##' Magnus Bodin. No license information provided.
+##' @format A \code{data.frame} with 2 columns: \code{token} a 5-digit
+##' number representing the results of 5 rolls of a dice, \code{word}
+##' the Diceware word corresponding to the dice rolls.
+"wordlist_sv"

@@ -5,6 +5,9 @@ test_that("check correct dimensions", {
           expect_equal(nrow(wordlist_es), 7776)
           expect_equal(nrow(wordlist_fr), 7776)
           expect_equal(nrow(wordlist_it), 7776)
+          expect_equal(nrow(wordlist_jp), 7776)
+          ##expect_equal(nrow(wordlist_nl), 7776)
+          expect_equal(nrow(wordlist_sv), 7776)
       })
 
 context("test token")
@@ -87,6 +90,12 @@ test_that("test passphrase", {
            #                                  title_case = TRUE, verbose = FALSE), "Kat")
            #expect_equal(generate_passphrase(tokens = c("53431"), wordlist = wordlist_nl,
            #                                  title_case = FALSE, verbose = FALSE), "kat")
+
+           ## Swedish
+           expect_equal(generate_passphrase(tokens = c("33343"), wordlist = wordlist_sv,
+                                             title_case = TRUE, verbose = FALSE), "Katt")
+           expect_equal(generate_passphrase(tokens = c("33343"), wordlist = wordlist_sv,
+                                             title_case = FALSE, verbose = FALSE), "katt")
 
 
         })
