@@ -1,0 +1,4 @@
+^data-raw$
+^\.travis\.yml$
+^README\.Rmd$
+^README-*\.png$
