@@ -1,6 +1,8 @@
 context("check that data set is loaded/available")
-test_that("check correct dimensions",
-          expect_equal(nrow(wordlist_en), 7776))
+test_that("check correct dimensions", {
+          expect_equal(nrow(wordlist_en), 7776)
+          expect_equal(nrow(wordlist_de), 7776)
+      })
 
 context("test token")
 test_that("check length", {
@@ -49,4 +51,9 @@ test_that("test passphrase", {
             expect_equal(generate_passphrase(tokens = c("36156", "35646"), wordlist = wordlist_en,
                                              title_case = TRUE, verbose = FALSE),
                          "LavaLamp")
+            expect_equal(generate_passphrase(tokens = c("34454"), wordlist = wordlist_de,
+                                             title_case = TRUE, verbose = FALSE), "Katze")
+            expect_equal(generate_passphrase(tokens = c("34454"), wordlist = wordlist_de,
+                                             title_case = FALSE, verbose = FALSE), "katze")
+
         })

@@ -11,7 +11,7 @@ the Diceware word corresponding to the dice rolls.}
 wordlist_en
 }
 \description{
-The English Diceware word list in English as provided at
+The English Diceware word list as provided at
 \url{http://world.std.com/~reinhold/diceware.wordlist.asc}.  To
 the extent that a word list is protected by copyright, A G
 Reinhold licenses its rights to the English Diceware Wordlist
