@@ -52,3 +52,13 @@
 ##' number representing the results of 5 rolls of a dice, \code{word}
 ##' the Diceware word corresponding to the dice rolls.
 "wordlist_it"
+
+##' Diceware word list (Japanese)
+##'
+##' The Japanese Diceware list as provided at
+##' \url{http://s3.amazonaws.com/dotclue.org/diceware_jp.txt}
+##' translated by Hiroshi Yuki, and provided in Romaji by J Greely
+##' @format A \code{data.frame} with 2 columns: \code{token} a 5-digit
+##' number representing the results of 5 rolls of a dice, \code{word}
+##' the Diceware word corresponding to the dice rolls.
+"wordlist_jp"

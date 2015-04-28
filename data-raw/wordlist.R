@@ -39,3 +39,8 @@ wordlist_it <- data.frame(token = wordlist_it[seq(1, length(wordlist_it), by = 2
                           word  = wordlist_it[seq(2, length(wordlist_it), by = 2)],
                           row.names = NULL)
 devtools::use_data(wordlist_it, overwrite = TRUE)
+
+## create the wordlist (Japanese)
+wordlist_jp <- read.table(file = "inst/extdata/wordlist_jp.txt", quote = "")
+names(wordlist_jp) <- c("token", "word")
+devtools::use_data(wordlist_jp, overwrite = TRUE)
