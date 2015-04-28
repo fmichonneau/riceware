@@ -72,7 +72,7 @@ test_that("test passphrase", {
                                              title_case = TRUE, verbose = FALSE), "Chaton")
             expect_equal(generate_passphrase(tokens = c("21631"), wordlist = wordlist_fr,
                                              title_case = FALSE, verbose = FALSE), "chaton")
-           ## Italian (no cat :( ))
+           ## Italian (no cat :( )
            expect_equal(generate_passphrase(tokens = c("32141"), wordlist = wordlist_it,
                                              title_case = TRUE, verbose = FALSE), "Gelato")
            expect_equal(generate_passphrase(tokens = c("32141"), wordlist = wordlist_it,

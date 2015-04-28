@@ -2240,7 +2240,7 @@
 25322	egerie
 25323	egide
 25324	eglise
-25325	Église
+25325	Eglise
 25326	ego
 25331	egout
 25332	eh
