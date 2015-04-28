@@ -32,3 +32,13 @@
 ##' number representing the results of 5 rolls of a dice, \code{word}
 ##' the Diceware word corresponding to the dice rolls.
 "wordlist_es"
+
+##' Diceware word list (French)
+##'
+##' The French Diceware list as provided at
+##' \url{http://weber.fi.eu.org/software/diceware/src/francais.wordlist.asc}. This list is provided
+##' by Matthieu Weber, no licensing information is provided.
+##' @format A \code{data.frame} with 2 columns: \code{token} a 5-digit
+##' number representing the results of 5 rolls of a dice, \code{word}
+##' the Diceware word corresponding to the dice rolls.
+"wordlist_fr"
