@@ -9,7 +9,7 @@
 ##' @author Francois Michonneau
 ##' @export
 check_token <- function(token) {
-    (length(token) == 1L) && grepl("^[1-6]{5}$", token)
+    (length(token) == 1L) && grepl("^[1-6]{5}$", as.character(token))
 }
 
 ##' Generates the tokens.
