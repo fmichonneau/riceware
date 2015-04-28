@@ -21,3 +21,14 @@
 ##' number representing the results of 5 rolls of a dice, \code{word}
 ##' the Diceware word corresponding to the dice rolls.
 "wordlist_de"
+
+##' Diceware word list (Spanish)
+##'
+##' The Spanish Diceware word list as provided at
+##' \url{http://world.std.com/~reinhold/diceware_espanol/DW-Espanol-1.txt}. This
+##' list is provided by Manuel Palao, CISM, CISA (manuel@@palao.com) under the terms of the
+##' GNU General Public License.
+##' @format A \code{data.frame} with 2 columns: \code{token} a 5-digit
+##' number representing the results of 5 rolls of a dice, \code{word}
+##' the Diceware word corresponding to the dice rolls.
+"wordlist_es"
