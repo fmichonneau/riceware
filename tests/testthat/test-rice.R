@@ -82,6 +82,11 @@ test_that("test passphrase", {
                                              title_case = TRUE, verbose = FALSE), "Neko")
            expect_equal(generate_passphrase(tokens = c("44565"), wordlist = wordlist_jp,
                                              title_case = FALSE, verbose = FALSE), "neko")
+           ## Dutch
+           #expect_equal(generate_passphrase(tokens = c("53431"), wordlist = wordlist_nl,
+           #                                  title_case = TRUE, verbose = FALSE), "Kat")
+           #expect_equal(generate_passphrase(tokens = c("53431"), wordlist = wordlist_nl,
+           #                                  title_case = FALSE, verbose = FALSE), "kat")
 
 
         })

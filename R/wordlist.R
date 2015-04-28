@@ -62,3 +62,14 @@
 ##' number representing the results of 5 rolls of a dice, \code{word}
 ##' the Diceware word corresponding to the dice rolls.
 "wordlist_jp"
+
+## Diceware word list (Dutch)
+##
+## The Dutch Diceware list as provided at
+## \url{http://theworld.com/~reinhold/DicewareDutch.txt} provided by
+## Bart Van den Eynde under the terms of the GNU Free Documentation
+## License.
+## @format A \code{data.frame} with 2 columns: \code{token} a 5-digit
+## number representing the results of 5 rolls of a dice, \code{word}
+## the Diceware word corresponding to the dice rolls.
+## "wordlist_nl"

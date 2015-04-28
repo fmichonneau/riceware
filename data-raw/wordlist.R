@@ -45,3 +45,12 @@ wordlist_jp <- read.table(file = "inst/extdata/wordlist_jp.txt", quote = "", str
                           colClasses = "character")
 names(wordlist_jp) <- c("token", "word")
 devtools::use_data(wordlist_jp, overwrite = TRUE)
+
+### Too many issues with encoding for now....
+## create the wordlist (Dutsch)
+## wordlist_nl <- read.table(file = "inst/extdata/wordlist_nl.txt", quote = "",
+##                           stringsAsFactors = FALSE, colClasses = "character",
+##                           comment.char = "", fileEncoding = "UTF-8")
+## names(wordlist_nl) <- c("token", "word")
+## ##wordlist_nl[["word"]] <- iconv(wordlist_nl[["word"]], "UTF-8", "ASCII")
+## devtools::use_data(wordlist_nl, overwrite = TRUE)
