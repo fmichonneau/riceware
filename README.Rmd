@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 
 Diceware is a method to generate robust passphrases. The idea is simple, you
 roll a 6-faced dice 5 times. Each time you record the number it gives you, and
-you obtain a string of numbers that look something like
+you obtain a string of numbers that looks like
 `61353`. [diceware.com](http://diceware.com) provides a list of 7776 words that
 corresponds to all the possible results of these 5 rolls. If you pick up a
 passphrase made up of 7 words (i.e., you roll the dice 7 x 5 = 35 times), there
@@ -34,16 +34,18 @@ need a quick passphrase you can just type `generate_passphrase()` to generate a
 7-word passphrase.
 
 By default, the package uses the `sample` function which relies on pseudorandom
-numbers. You can use true random numbers by typing:
+numbers. You can use true random numbers by using:
 
 ```{r}
 generate_passphrase(tokens = generate_token(n_words = 7, method = "random"))
+## or with pipes:
+## 7 %>% generate_token(method = "random") %>% generate_passphrase
 ```
 
 With this approach, the tokens are generated from truly random numbers using the
 [random.org](http://www.random.org) website (using the
-[random package](http://cran.r-project.org/package=random), from Dirk
-Eddelbuettel). These numbers are converted from atmospheric noise and is truly
+[random package](http://cran.r-project.org/package=random), by [Dirk
+Eddelbuettel]). These numbers are converted from atmospheric noise and is truly
 random. However, if you are really concerned about security, this is not perfect
 as the numbers are transfered without any form of encryption on the
 network. Rolling a physical dice is a more robust approach. If you rolled your
