@@ -15,14 +15,10 @@ By default, the package uses the `sample` function which relies on pseudorandom 
 
 ``` {.r}
 generate_passphrase(tokens = generate_token(n_words = 7, method = "random"))
-#> Warning: closing unused connection 6
-#> (https://random.org/integers/?num=35&min=1&max=6&col=5&base=10&format=plain&rnd=new)
-#> Warning: closing unused connection 3
-#> (https://random.org/integers/?num=35&min=1&max=6&col=5&base=10&format=plain&rnd=new)
-#> Your passphrase is: Indies Dna Check C Foxy Aid Gimpy
-#> [1] "IndiesDnaCheckCFoxyAidGimpy"
 ## or with pipes:
 ## 7 %>% generate_token(method = "random") %>% generate_passphrase
+#> Your passphrase is: Indies Dna Check C Foxy Aid Gimpy
+#> [1] "IndiesDnaCheckCFoxyAidGimpy"
 ```
 
 With this approach, the tokens are generated from truly random numbers using the [random.org](http://www.random.org) website (using the [random package](http://cran.r-project.org/package=random), by [Dirk Eddelbuettel]). These numbers are converted from atmospheric noise and is truly random. However, if you are really concerned about security, this is not perfect as the numbers are transfered without any form of encryption on the network. Rolling a physical dice is a more robust approach. If you rolled your dice 15 times to generate 3 words, you generate your passphrase like this:

@@ -36,10 +36,12 @@ need a quick passphrase you can just type `generate_passphrase()` to generate a
 By default, the package uses the `sample` function which relies on pseudorandom
 numbers. You can use true random numbers by using:
 
-```{r}
+```{.r, eval=FALSE}
 generate_passphrase(tokens = generate_token(n_words = 7, method = "random"))
 ## or with pipes:
 ## 7 %>% generate_token(method = "random") %>% generate_passphrase
+#> Your passphrase is: Indies Dna Check C Foxy Aid Gimpy
+#> [1] "IndiesDnaCheckCFoxyAidGimpy"
 ```
 
 With this approach, the tokens are generated from truly random numbers using the
