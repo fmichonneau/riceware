@@ -11,7 +11,15 @@ Diceware is a method to generate robust passphrases. The idea is simple, you rol
 
 This package provides a way to generate this passphrase automatically. If you need a quick passphrase you can just type `generate_passphrase()` to generate a 7-word passphrase.
 
-However, this is not recommended and rolling a physical dice is a more robust approach. If you rolled your dice 15 times to generate 3 words, you could also get the passphrase like this:
+By default, the package uses the `sample` function which relies on pseudorandom numbers. You can use true random numbers by typing:
+
+``` {.r}
+generate_passphrase(tokens = generate_token(n_words = 7, method = "random"))
+#> Your passphrase is: Vp Texas 4th Bub Rig Dint 9000
+#> [1] "VpTexas4thBubRigDint9000"
+```
+
+With this approach, the tokens are generated from truly random numbers using the [random.org](http://www.random.org) website (using the [random package](http://cran.r-project.org/package=random), from Dirk Eddelbuettel). These numbers are converted from atmospheric noise and is truly random. However, if you are really concerned about security, this is not perfect as the numbers are transfered without any form of encryption on the network. Rolling a physical dice is a more robust approach. If you rolled your dice 15 times to generate 3 words, you generate your passphrase like this:
 
 ``` {.r}
 generate_passphrase(tokens = c("52126", "52215", "52222"))
