@@ -4,8 +4,8 @@
 
 [![Travis-CI Build Status](https://travis-ci.org/fmichonneau/riceware.png?branch=master)](https://travis-ci.org/fmichonneau/riceware)
 
-riceware
-========
+riceware :rice:
+===============
 
 Diceware is a method to generate robust passphrases. The idea is simple, you roll a 6-faced dice 5 times. Each time you record the number it gives you, and you obtain a string of numbers that look something like `61353`. [diceware.com](http://diceware.com) provides a list of 7776 words that corresponds to all the possible results of these 5 rolls. If you pick up a passphrase made up of 7 words (i.e., you roll the dice 7 x 5 = 35 times), there are 7776\^7 = 1.719e+27 possibilities. At 1 trillion guesses a second, it would take an [average of 27 million years](https://firstlook.org/theintercept/2015/03/26/passphrases-can-memorize-attackers-cant-guess/) to find the correct passphrase. Not bad.
 
@@ -15,8 +15,8 @@ By default, the package uses the `sample` function which relies on pseudorandom 
 
 ``` {.r}
 generate_passphrase(tokens = generate_token(n_words = 7, method = "random"))
-#> Your passphrase is: Vp Texas 4th Bub Rig Dint 9000
-#> [1] "VpTexas4thBubRigDint9000"
+#> Your passphrase is: Sail Ls Balkan Fussy Thai Hail Ef
+#> [1] "SailLsBalkanFussyThaiHailEf"
 ```
 
 With this approach, the tokens are generated from truly random numbers using the [random.org](http://www.random.org) website (using the [random package](http://cran.r-project.org/package=random), from Dirk Eddelbuettel). These numbers are converted from atmospheric noise and is truly random. However, if you are really concerned about security, this is not perfect as the numbers are transfered without any form of encryption on the network. Rolling a physical dice is a more robust approach. If you rolled your dice 15 times to generate 3 words, you generate your passphrase like this:

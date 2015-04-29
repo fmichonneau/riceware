@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 [![Travis-CI Build Status](https://travis-ci.org/fmichonneau/riceware.png?branch=master)](https://travis-ci.org/fmichonneau/riceware)
 
-# riceware
+# riceware :rice:
 
 Diceware is a method to generate robust passphrases. The idea is simple, you
 roll a 6-faced dice 5 times. Each time you record the number it gives you, and
