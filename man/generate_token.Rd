@@ -4,10 +4,12 @@
 \alias{generate_token}
 \title{Generate the tokens}
 \usage{
-generate_token(n_words)
+generate_token(n_words, method = c("pseudorandom", "random"))
 }
 \arguments{
-\item{n_words}{The number of token to generate}
+\item{n_words}{The number of tokens to generate.}
+
+\item{method}{The method used to draw the random numbers. See below for more details.}
 }
 \value{
 A character vector representing the generated tokens.
@@ -16,9 +18,35 @@ A character vector representing the generated tokens.
 Generates the tokens.
 }
 \details{
-This function generates as many tokens as needed to create the passphrase.
+This function generates as many tokens as needed to create the
+passphrase. Currently, two methods can be used to generate the
+random tokens.
+\enumerate{
+
+\item The simplest and the default (\code{pseudorandom}) uses the
+function \code{sample} to simulate the dice rolls. Numbers
+generated this way are not truly random but are a decent
+approximation.
+
+\item The other option (\code{random}) uses the \code{random} package
+that gets truly random numbers by converting atmospheric noise
+into numbers. The main issue is that someone could monitor your
+network and intercept the numbers that are being used. If you are
+concerned about this, use a physical dice.
+}
+
+Note that if you want to use the \code{random} method, you will
+need an internet connection. The service that provides these
+random numbers (\url{http://www.random.org}) has daily quotas,
+don't go too crazy (if you need to, you can purchase additional
+bits, see \url{http://www.random.org/quota}).
 }
 \author{
 Francois Michonneau
+}
+\seealso{
+\url{http://www.random.org} the website that generates
+the true random numbers, and the random package from Dirk
+Eddelbuettel.
 }
 

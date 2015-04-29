@@ -28,11 +28,35 @@ test_that("check digits", {
           expect_true(check_token("23456"))
       })
 
+not_working <- function() {
+    if (capabilities()["http/ftp"]) { ## Are we on a platform that allows internet access?
+        if (.Platform$OS.type == "unix") { ## If unix, then we can use nsl to check connection
+            res <- is.null(utils::nsl("random.org"))
+        } else { ## otherwise just fail
+            res <- TRUE
+        }
+    } else {
+        res <- TRUE
+    }
+    res
+}
+check_random_org <- function() {
+    if(not_working()) {
+        skip("can't connect to random.org")
+    }
+}
+
 context("generate token")
-test_that("correct length", {
-          test_len <- lapply(1:10, generate_token)
+test_that("correct length and pseudorandom", {
+          test_len <- lapply(1:10, generate_token, method = "pseudo")
           expect_equal(1:10, sapply(test_len, length))
       })
+
+test_that("random numbers", {
+              check_random_org()
+              expect_equal(1, length(generate_token(n_words = 1, method = "random")))
+          })
+
 
 context("match token")
 test_that("correct matching", {

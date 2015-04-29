@@ -14,15 +14,47 @@ check_token <- function(token) {
 
 ##' Generates the tokens.
 ##'
-##' This function generates as many tokens as needed to create the passphrase.
+##' This function generates as many tokens as needed to create the
+##' passphrase. Currently, two methods can be used to generate the
+##' random tokens.
+##' \enumerate{
+##'
+##'  \item The simplest and the default (\code{pseudorandom}) uses the
+##' function \code{sample} to simulate the dice rolls. Numbers
+##' generated this way are not truly random but are a decent
+##' approximation.
+##'
+##'  \item The other option (\code{random}) uses the \code{random} package
+##' that gets truly random numbers by converting atmospheric noise
+##' into numbers. The main issue is that someone could monitor your
+##' network and intercept the numbers that are being used. If you are
+##' concerned about this, use a physical dice.
+##' }
+##'
+##' Note that if you want to use the \code{random} method, you will
+##' need an internet connection. The service that provides these
+##' random numbers (\url{http://www.random.org}) has daily quotas,
+##' don't go too crazy (if you need to, you can purchase additional
+##' bits, see \url{http://www.random.org/quota}).
 ##' @title Generate the tokens
-##' @param n_words The number of token to generate
+##' @param n_words The number of tokens to generate.
+##' @param method The method used to draw the random numbers. See below for more details.
 ##' @return A character vector representing the generated tokens.
 ##' @author Francois Michonneau
+##' @seealso \url{http://www.random.org} the website that generates
+##' the true random numbers, and the random package from Dirk
+##' Eddelbuettel.
 ##' @export
-generate_token <- function(n_words) {
-    rolls <- replicate(sample(1:6, 5), n = n_words)
-    apply(rolls, 2, paste0, collapse = "")
+generate_token <- function(n_words, method = c("pseudorandom", "random")) {
+    method <- match.arg(method)
+    if (identical(method,  "pseudorandom")) {
+        rolls <- replicate(sample(1:6, 5), n = n_words)
+        tok <- apply(rolls, 2, paste0, collapse = "")
+    } else if (identical(method, "random")) {
+        rolls <- random::randomNumbers(n = n_words * 5L, min = 1, max = 6, col = 5)
+        tok <- apply(rolls, 1, paste0, collapse = "")
+    }
+    tok
 }
 
 ##' Retrieves the word corresponding to a given token.
