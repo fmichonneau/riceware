@@ -4,7 +4,7 @@
 \alias{match_token}
 \title{Match the token to a word}
 \usage{
-match_token(token, wordlist = wordlist_en, title_case = TRUE)
+match_token(token, wordlist = riceware::wordlist_en, title_case = TRUE)
 }
 \arguments{
 \item{token}{A correctly formatted token}

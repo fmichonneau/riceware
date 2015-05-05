@@ -27,6 +27,10 @@ passphrase. You can control the wordlist you choose and whether
 the passphrase uses title case by providing additional arguments
 that will be passed to \code{\link{match_token}}.
 }
+\examples{
+generate_passphrase(tokens = generate_token(7, "pseudorandom"),
+                      verbose = FALSE)
+}
 \author{
 Francois Michonneau
 }
