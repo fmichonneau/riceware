@@ -1,5 +1,6 @@
 ^data-raw$
 ^\.travis\.yml$
 ^README\.Rmd$
+^README\.md$
 ^README-*\.png$
 inst/extdata/wordlist_nl.txt
