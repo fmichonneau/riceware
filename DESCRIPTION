@@ -1,5 +1,5 @@
 Package: riceware
-Title: A Diceware Passphrase Implementation in R
+Title: A Diceware Passphrase Implementation
 Version: 0.2
 Authors@R: c(
 	   person("Francois", "Michonneau", role=c("aut", "cre"),
