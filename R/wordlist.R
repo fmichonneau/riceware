@@ -9,6 +9,7 @@
 ##' @format A \code{data.frame} with 2 columns: \code{token} a 5-digit
 ##' number representing the results of 5 rolls of a dice, \code{word}
 ##' the Diceware word corresponding to the dice rolls.
+##' @keywords datasets
 "wordlist_en"
 
 ##' Diceware word list (German)
@@ -20,6 +21,7 @@
 ##' @format A \code{data.frame} with  2 columns: \code{token} a 5-digit
 ##' number representing the results of 5 rolls of a dice, \code{word}
 ##' the Diceware word corresponding to the dice rolls.
+##' @keywords datasets
 "wordlist_de"
 
 ##' Diceware word list (Spanish)
@@ -31,6 +33,7 @@
 ##' @format A \code{data.frame} with 2 columns: \code{token} a 5-digit
 ##' number representing the results of 5 rolls of a dice, \code{word}
 ##' the Diceware word corresponding to the dice rolls.
+##' @keywords datasets
 "wordlist_es"
 
 ##' Diceware word list (French)
@@ -41,6 +44,7 @@
 ##' @format A \code{data.frame} with 2 columns: \code{token} a 5-digit
 ##' number representing the results of 5 rolls of a dice, \code{word}
 ##' the Diceware word corresponding to the dice rolls.
+##' @keywords datasets
 "wordlist_fr"
 
 ##' Diceware word list (Italian)
@@ -51,6 +55,7 @@
 ##' @format A \code{data.frame} with 2 columns: \code{token} a 5-digit
 ##' number representing the results of 5 rolls of a dice, \code{word}
 ##' the Diceware word corresponding to the dice rolls.
+##' @keywords datasets
 "wordlist_it"
 
 ##' Diceware word list (Japanese)
@@ -62,6 +67,7 @@
 ##' @format A \code{data.frame} with 2 columns: \code{token} a 5-digit
 ##' number representing the results of 5 rolls of a dice, \code{word}
 ##' the Diceware word corresponding to the dice rolls.
+##' @keywords datasets
 "wordlist_jp"
 
 ## too many encoding issues at this stage.
@@ -86,4 +92,5 @@
 ##' @format A \code{data.frame} with 2 columns: \code{token} a 5-digit
 ##' number representing the results of 5 rolls of a dice, \code{word}
 ##' the Diceware word corresponding to the dice rolls.
+##' @keywords datasets
 "wordlist_sv"
