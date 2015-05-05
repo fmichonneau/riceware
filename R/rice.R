@@ -100,6 +100,9 @@ match_token <- function(token, wordlist = riceware::wordlist_en,
 ##' @return a character string representing the passphrase
 ##' @author Francois Michonneau
 ##' @seealso \code{\link{match_token}}, \code{\link{generate_token}}
+##' @examples
+##'   generate_passphrase(tokens = generate_token(7, "pseudorandom"),
+##'                       verbose = FALSE)
 ##' @export
 generate_passphrase <- function(tokens = generate_token(7), verbose = TRUE, ...) {
     pass <- sapply(tokens, match_token, ...)
