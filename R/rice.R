@@ -72,7 +72,8 @@ generate_token <- function(n_words, method = c("pseudorandom", "random")) {
 ##' corresponding to the token.
 ##' @author Francois Michonneau
 ##' @export
-match_token <- function(token, wordlist = wordlist_en, title_case = TRUE) {
+match_token <- function(token, wordlist = riceware::wordlist_en,
+                        title_case = TRUE) {
     if (check_token(token)) {
         wrd <- wordlist[wordlist$token %in% token, "word", drop = TRUE]
         if (title_case) {
