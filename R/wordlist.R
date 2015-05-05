@@ -64,6 +64,9 @@
 ##' the Diceware word corresponding to the dice rolls.
 "wordlist_jp"
 
+## too many encoding issues at this stage.
+## dataset is in the github repo but not in the official package
+## as I added it to .Rbuildignore
 ## Diceware word list (Dutch)
 ##
 ## The Dutch Diceware list as provided at
