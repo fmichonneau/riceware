@@ -1,7 +1,8 @@
 
 
 [![Travis-CI Build Status](https://travis-ci.org/fmichonneau/riceware.png?branch=master)](https://travis-ci.org/fmichonneau/riceware)
-[![Coverage Status](https://coveralls.io/repos/fmichonneau/riceware/badge.svg?branch=master)](https://coveralls.io/r/fmichonneau/riceware?branch=master)
+
+[![Coverage Status](https://coveralls.io/repos/fmichonneau/riceware/badge.svg)](https://coveralls.io/r/fmichonneau/riceware)
 
 # riceware :rice:
 
