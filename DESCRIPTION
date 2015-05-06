@@ -11,6 +11,8 @@ Description: The Diceware method can be used to generate strong passphrases.
   matched against a dictionary of easily remembered words. By combining together 7
   words thus generated, you obtain a password that is relatively easy to remember,
   but would take several millions years (on average) for a powerful computer to guess.
+URL: https://github.com/fmichonneau/riceware
+BugReports: https://github.com/fmichonneau/riceware/issues
 Depends: R (>= 3.1.3)
 Imports: random
 License: MIT + file LICENSE
