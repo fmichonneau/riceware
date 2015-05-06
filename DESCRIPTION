@@ -1,6 +1,6 @@
 Package: riceware
 Title: A Diceware Passphrase Implementation
-Version: 0.2
+Version: 0.3
 Authors@R: c(
 	   person("Francois", "Michonneau", role=c("aut", "cre"),
                   email="francois.michonneau@gmail.com"),
@@ -8,7 +8,7 @@ Authors@R: c(
 	   )
 Description: The Diceware method can be used to generate strong passphrases.
   In short, you roll a 6-faced dice 5 times in a row, the number obtained is
-  matched against a dictionary of easily remembered word. By combining together 7
+  matched against a dictionary of easily remembered words. By combining together 7
   words thus generated, you obtain a password that is relatively easy to remember,
   but would take several millions years (on average) for a powerful computer to guess.
 Depends: R (>= 3.1.3)

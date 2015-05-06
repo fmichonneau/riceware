@@ -46,12 +46,13 @@ generate_passphrase(tokens = generate_token(n_words = 7, method = "random"))
 
 With this approach, the tokens are generated from truly random numbers using the
 [random.org](http://www.random.org) website (using the
-[random package](http://cran.r-project.org/package=random), by [Dirk
-Eddelbuettel]). These numbers are converted from atmospheric noise and is truly
-random. However, if you are really concerned about security, this is not perfect
-as the numbers are transfered without any form of encryption on the
-network. Rolling a physical dice is a more robust approach. If you rolled your
-dice 15 times to generate 3 words, you generate your passphrase like this:
+[random package](http://cran.r-project.org/package=random), by
+[Dirk Eddelbuettel](http://dirk.eddelbuettel.com/)). These numbers are converted
+from atmospheric noise and are truly random. However, if you are really concerned
+about security, this is not perfect as the numbers are transfered without any
+form of encryption on the network. Rolling a physical dice is a more robust
+approach. If you rolled your dice 15 times to generate 3 words, you generate
+your passphrase like this:
 
 ```{r}
 generate_passphrase(tokens = c("52126", "52215", "52222"))
