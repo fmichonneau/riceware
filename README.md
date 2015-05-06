@@ -1,14 +1,7 @@
----
-output:
-  md_document:
-    variant: markdown_github
----
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 
 
 [![Travis-CI Build Status](https://travis-ci.org/fmichonneau/riceware.png?branch=master)](https://travis-ci.org/fmichonneau/riceware)
+[![Coverage Status](https://coveralls.io/repos/fmichonneau/riceware/badge.svg?branch=master)](https://coveralls.io/r/fmichonneau/riceware?branch=master)
 
 # riceware :rice:
 

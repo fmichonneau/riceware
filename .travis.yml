@@ -1,5 +1,12 @@
 language: r
+
 sudo: required
+
+r_github_pacakges:
+  - jimhester/covr
+
+after_success:
+  - Rscript -e 'library(covr); coveralls()'
 
 # # Sample .travis.yml for R projects from https://github.com/craigcitro/r-travis
 
