@@ -25,6 +25,8 @@ By default, the package uses the `sample` function which relies on pseudorandom
 numbers. You can use true random numbers by using:
 
 
+
+
 ```r
 generate_passphrase(tokens = generate_token(n_words = 7, method = "random"))
 ## or with pipes:
@@ -46,7 +48,8 @@ your passphrase like this:
 
 ```r
 generate_passphrase(tokens = c("52126", "52215", "52222"))
-#> Error in eval(expr, envir, enclos): could not find function "generate_passphrase"
+#> Your passphrase is: Ripley Rocky Rodeo
+#> [1] "RipleyRockyRodeo"
 ```
 
 ## Other languages
@@ -64,22 +67,22 @@ In addition of English, riceware provides wordlists in:
 ```r
 generate_passphrase(tokens = c("34454"), wordlist = wordlist_de,
                     title_case = TRUE, verbose = FALSE)
-#> Error in eval(expr, envir, enclos): could not find function "generate_passphrase"
+#> [1] "Katze"
 generate_passphrase(tokens = c("35622"), wordlist = wordlist_es,
                     title_case = TRUE, verbose = FALSE)
-#> Error in eval(expr, envir, enclos): could not find function "generate_passphrase"
+#> [1] "Gato"
 generate_passphrase(tokens = c("21631"), wordlist = wordlist_fr,
                     title_case = TRUE, verbose = FALSE)
-#> Error in eval(expr, envir, enclos): could not find function "generate_passphrase"
+#> [1] "Chaton"
 generate_passphrase(tokens = c("32141"), wordlist = wordlist_it,
                     title_case = TRUE, verbose = FALSE)
-#> Error in eval(expr, envir, enclos): could not find function "generate_passphrase"
+#> [1] "Gelato"
 generate_passphrase(tokens = c("44565"), wordlist = wordlist_jp,
                     title_case = TRUE, verbose = FALSE)
-#> Error in eval(expr, envir, enclos): could not find function "generate_passphrase"
+#> [1] "Neko"
 generate_passphrase(tokens = c("33343"), wordlist = wordlist_sv,
                     title_case = TRUE, verbose = FALSE)
-#> Error in eval(expr, envir, enclos): could not find function "generate_passphrase"
+#> [1] "Katt"
 ```
 
 ## installation
@@ -88,4 +91,5 @@ generate_passphrase(tokens = c("33343"), wordlist = wordlist_sv,
 ```r
 install.packages("devtools")
 devtools::install_github("fmichonneau/riceware")
+library(riceware)
 ```
