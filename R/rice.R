@@ -51,6 +51,7 @@ generate_token <- function(n_words, method = c("pseudorandom", "random")) {
         rolls <- replicate(sample(1:6, 5), n = n_words)
         tok <- apply(rolls, 2, paste0, collapse = "")
     } else if (identical(method, "random")) {
+        n_words <- as.integer(n_words)
         rolls <- random::randomNumbers(n = n_words * 5L, min = 1, max = 6, col = 5)
         tok <- apply(rolls, 1, paste0, collapse = "")
     }

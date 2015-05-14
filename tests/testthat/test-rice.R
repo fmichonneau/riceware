@@ -50,9 +50,11 @@ context("generate token")
 test_that("correct length and pseudorandom", {
           test_len <- lapply(1:10, generate_token, method = "pseudo")
           expect_equal(1:10, sapply(test_len, length))
+          expect_equal(1, length(generate_token(1)))
       })
 
 test_that("random numbers", {
+              skip_on_cran()
               check_random_org()
               expect_equal(1, length(generate_token(n_words = 1, method = "random")))
           })
