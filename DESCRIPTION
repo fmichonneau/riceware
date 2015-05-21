@@ -1,6 +1,6 @@
 Package: riceware
 Title: A Diceware Passphrase Implementation
-Version: 0.4
+Version: 0.5
 Authors@R: c(
 	   person("Francois", "Michonneau", role=c("aut", "cre"),
                   email="francois.michonneau@gmail.com"),
