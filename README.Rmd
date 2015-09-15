@@ -7,8 +7,10 @@ knitr::opts_chunk$set(
 ```
 
 [![Travis-CI Build Status](https://travis-ci.org/fmichonneau/riceware.png?branch=master)](https://travis-ci.org/fmichonneau/riceware)
-
 [![Coverage Status](https://coveralls.io/repos/fmichonneau/riceware/badge.svg)](https://coveralls.io/r/fmichonneau/riceware)
+[![](http://www.r-pkg.org/badges/version/riceware)](http://www.r-pkg.org/pkg/riceware)
+[![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/riceware)](http://www.r-pkg.org/pkg/riceware)
+
 
 # riceware :rice:
 
