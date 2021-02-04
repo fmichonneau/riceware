@@ -1,3 +1,16 @@
+##' EFF's long word list (English)
+##'
+##' The Electronic Frontier Foundation (EFF) has enhanced the usability of the
+##' original Diceware list. A blog post
+##' \url{https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases}
+##' explains these enhancements. Only the long list is provided as part of
+##' \code{riceware}.
+##' @format a \code{data.frame} with 2 columns: \code{token} a 5-digit number
+##'   representing the results of 5 rolls of a 6-faced dice, and \code{word} the
+##'   word corresponding to the dice rolls.
+##' @keywords dataset
+"wordlist_eff"
+
 ##' Diceware word list (English)
 ##'
 ##' The English Diceware word list as provided at

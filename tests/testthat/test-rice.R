@@ -92,6 +92,13 @@ test_that("test passphrase", {
     title_case = TRUE,
     verbose = FALSE
   ), "LavaLamp")
+  ## EFF's list
+  expect_equal(generate_passphrase(
+    tokens = c("15233"),
+    wordlist = wordlist_eff,
+    title_case = TRUE,
+    verbose = FALSE
+  ),  "Catnip")
   ## German
   expect_equal(generate_passphrase(
     tokens = c("34454"), wordlist = wordlist_de,
@@ -160,6 +167,7 @@ test_that("no NAs in the wordlists", {
     list(
       wordlist_de,
       wordlist_en,
+      wordlist_eff,
       wordlist_es,
       wordlist_fr,
       wordlist_it,
