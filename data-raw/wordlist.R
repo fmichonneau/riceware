@@ -5,6 +5,11 @@ wordlist_en <- read.csv(file = "inst/extdata/wordlist_en.csv", header = FALSE, s
 names(wordlist_en) <- c("token", "word")
 usethis::use_data(wordlist_en, overwrite = TRUE)
 
+## create the EFF long wordlist
+wordlist_eff <- read.delim(file = "inst/extdata/wordlist_eff_en.txt", sep = "\t", header = FALSE,  stringsAsFactors = FALSE)
+names(wordlist_eff) <- c("token", "word")
+usethis::use_data(wordlist_eff, overwrite = TRUE)
+
 ## create the wordlist (German)
 library(magrittr)
 wordlist_de <- scan("inst/extdata/wordlist_de.txt", what = "character", quote = "", sep = "\n") %>%
